@@ -62,25 +62,21 @@
             display: flex;
             align-items: center;
             margin-bottom: 2rem;
+            overflow: hidden;
         }
         .screenshot-gallery {
             display: flex;
-            overflow-x: hidden;
-            padding: 1rem 0;
+            overflow-x: auto;
             gap: 1rem;
             scroll-behavior: smooth;
-            width: 80%;
-            margin: 0 auto;
+            width: 100%; /* Adjusted for mobile */
         }
         .screenshot-gallery img {
-            max-height: 100%; /* Increased the size of images */
+            max-width: 100%; /* Adjusted to fit the screen */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
             flex-shrink: 0;
-        }
-        .screenshot-gallery img:hover {
-            transform: scale(1.05);
         }
         .scroll-button {
             position: absolute;
@@ -101,6 +97,17 @@
         .scroll-button.right {
             right: 10px;
         }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .screenshot-gallery {
+                gap: 0.5rem; /* Smaller gap on mobile */
+            }
+            .scroll-button {
+                display: none; /* Hide buttons on small screens if they overlap */
+            }
+        }
+
         footer {
             background-color: #4CAF50;
             color: #fff;
