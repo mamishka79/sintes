@@ -78,16 +78,33 @@
             transform: scale(1.05); /* Image enlarges slightly when hovered */
         }
 
-        /* Waitlist Form */
-        .waitlist-container {
+        /* Waitlist and Plugin Block Layout */
+        .two-column-layout {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
             margin-top: 3rem;
+        }
+        .plugin-block, .waitlist-container {
             background-color: #fff;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
+            flex: 1;
+        }
+        .plugin-block h2 {
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+        .plugin-block p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .plugin-block a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
         }
         .waitlist-container h2 {
             margin-bottom: 1rem;
@@ -132,6 +149,10 @@
             .gallery-container img {
                 width: 200px; /* Smaller images on mobile */
             }
+            .two-column-layout {
+                flex-direction: column; /* Stack on mobile */
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -160,15 +181,25 @@
             <p>🤖 <strong>Automatic Planning:</strong> Based on your past data, the bot will create an automatic plan for your day, taking into account your habits and priorities.</p>
         </div>
 
-        <!-- Waitlist form section -->
-        <div class="waitlist-container">
-            <h2>Join the Waitlist</h2>
-            <p>Sign up to be the first to know when our bot is available!</p>
-            <form>
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <br>
-                <button type="submit">Join Waitlist</button>
-            </form>
+        <!-- Two-column layout for plugin link and waitlist form -->
+        <div class="two-column-layout">
+            <!-- Plugin block -->
+            <div class="plugin-block">
+                <h2>Try Our GPT Plugin</h2>
+                <p>Experience the full functionality of our product with the GPT plugin. Get started today!</p>
+                <p><a href="https://link-to-your-plugin.com" target="_blank">Learn More About the GPT Plugin</a></p>
+            </div>
+
+            <!-- Waitlist form section -->
+            <div class="waitlist-container">
+                <h2>Join the Waitlist</h2>
+                <p>Sign up to be the first to know when our bot is available!</p>
+                <form>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <br>
+                    <button type="submit">Join Waitlist</button>
+                </form>
+            </div>
         </div>
     </section>
 
