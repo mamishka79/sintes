@@ -158,17 +158,23 @@
         const scrollAmount = 200;
 
         function scrollLeft() {
-            gallery.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
+            // Ensure that we don't scroll beyond the leftmost edge
+            if (gallery.scrollLeft > 0) {
+                gallery.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
         }
 
         function scrollRight() {
-            gallery.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
+            // Ensure that we don't scroll beyond the rightmost edge
+            if (gallery.scrollLeft < gallery.scrollWidth - gallery.clientWidth) {
+                gallery.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            }
         }
     </script>
 
