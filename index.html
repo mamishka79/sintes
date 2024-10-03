@@ -62,25 +62,20 @@
         .gallery-container {
             display: flex;
             overflow-x: auto;
-            scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory; /* Enables snapping */
             gap: 20px;
             padding: 10px 0;
-            margin-bottom: 2rem;
+            scroll-padding: 0 50%; /* Centering effect when scroll snaps */
         }
         .gallery-container img {
+            flex-shrink: 0;
             width: 300px;
             height: auto;
-            flex-shrink: 0;
-            scroll-snap-align: center;
+            scroll-snap-align: center; /* Each image will snap to the center */
             transition: transform 0.3s ease-in-out;
         }
         .gallery-container img:hover {
-            transform: scale(1.05);
-        }
-
-        .small-image {
-            opacity: 0.5;
-            width: 150px;
+            transform: scale(1.05); /* Image enlarges slightly when hovered */
         }
 
         footer {
@@ -97,10 +92,7 @@
         /* Responsive */
         @media screen and (max-width: 768px) {
             .gallery-container img {
-                width: 200px;
-            }
-            .small-image {
-                width: 100px;
+                width: 200px; /* Smaller images on mobile */
             }
         }
     </style>
@@ -113,13 +105,11 @@
 
     <section class="container">
         <div class="gallery-container">
-            <!-- Main image with larger size -->
-            <img src="Plan (3).png" alt="Screenshot 1" class="main-image">
-
-            <!-- Background images with smaller size and transparency -->
-            <img src="Fast (2).png" alt="Screenshot 2" class="small-image">
-            <img src="Data (1).png" alt="Screenshot 3" class="small-image">
-            <img src="Auto (1).png" alt="Screenshot 4" class="small-image">
+            <!-- Images in the gallery that will snap to the center -->
+            <img src="Plan (3).png" alt="Screenshot 1">
+            <img src="Fast (2).png" alt="Screenshot 2">
+            <img src="Data (1).png" alt="Screenshot 3">
+            <img src="Auto (1).png" alt="Screenshot 4">
         </div>
 
         <h2>About the Product</h2>
