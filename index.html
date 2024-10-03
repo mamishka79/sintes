@@ -61,6 +61,7 @@
             position: relative;
             display: flex;
             align-items: center;
+            margin-bottom: 2rem;
         }
         .screenshot-gallery {
             display: flex;
@@ -72,7 +73,7 @@
             margin: 0 auto;
         }
         .screenshot-gallery img {
-            max-height: 100px;
+            max-height: 200px; /* Increased the size of images */
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease-in-out;
@@ -119,16 +120,6 @@
     </header>
 
     <section class="container">
-        <h2>About the Product</h2>
-        <p class="description">We are developing a Telegram bot that helps you effectively plan your day and analyze how you allocate your time.</p>
-        
-        <div class="features">
-            <h3>Main Features:</h3>
-            <p>🗣 <strong>Text and Voice Planning:</strong> Write your plans as text or send a voice message. The bot will automatically convert your voice to text and organize your plans into a convenient table or list.</p>
-            <p>📊 <strong>Time Analytics:</strong> Analyze your data — see how much time you spend on sleep, gaming, and other activities. Maybe it's time to take control of your time?</p>
-            <p>🤖 <strong>Automatic Planning:</strong> Based on your past data, the bot will create an automatic plan for your day, taking into account your habits and priorities.</p>
-        </div>
-
         <div class="gallery-container">
             <button class="scroll-button left" onclick="scrollLeft()">&#10094;</button>
             <div class="screenshot-gallery" id="gallery">
@@ -138,6 +129,16 @@
                 <img src="Auto (1).png" alt="Screenshot 4">
             </div>
             <button class="scroll-button right" onclick="scrollRight()">&#10095;</button>
+        </div>
+
+        <h2>About the Product</h2>
+        <p class="description">We are developing a Telegram bot that helps you effectively plan your day and analyze how you allocate your time.</p>
+        
+        <div class="features">
+            <h3>Main Features:</h3>
+            <p>🗣 <strong>Text and Voice Planning:</strong> Write your plans as text or send a voice message. The bot will automatically convert your voice to text and organize your plans into a convenient table or list.</p>
+            <p>📊 <strong>Time Analytics:</strong> Analyze your data — see how much time you spend on sleep, gaming, and other activities. Maybe it's time to take control of your time?</p>
+            <p>🤖 <strong>Automatic Planning:</strong> Based on your past data, the bot will create an automatic plan for your day, taking into account your habits and priorities.</p>
         </div>
     </section>
 
