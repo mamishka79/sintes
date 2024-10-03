@@ -78,6 +78,44 @@
             transform: scale(1.05); /* Image enlarges slightly when hovered */
         }
 
+        /* Waitlist Form */
+        .waitlist-container {
+            margin-top: 3rem;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .waitlist-container h2 {
+            margin-bottom: 1rem;
+            color: #4CAF50;
+        }
+        .waitlist-container input[type="email"] {
+            padding: 0.8rem;
+            width: 80%;
+            font-size: 1rem;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            box-sizing: border-box;
+        }
+        .waitlist-container button {
+            padding: 0.8rem 2rem;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .waitlist-container button:hover {
+            background-color: #45a049;
+        }
+
         footer {
             background-color: #4CAF50;
             color: #fff;
@@ -120,6 +158,17 @@
             <p>🗣 <strong>Text and Voice Planning:</strong> Write your plans as text or send a voice message. The bot will automatically convert your voice to text and organize your plans into a convenient table or list.</p>
             <p>📊 <strong>Time Analytics:</strong> Analyze your data — see how much time you spend on sleep, gaming, and other activities. Maybe it's time to take control of your time?</p>
             <p>🤖 <strong>Automatic Planning:</strong> Based on your past data, the bot will create an automatic plan for your day, taking into account your habits and priorities.</p>
+        </div>
+
+        <!-- Waitlist form section -->
+        <div class="waitlist-container">
+            <h2>Join the Waitlist</h2>
+            <p>Sign up to be the first to know when our bot is available!</p>
+            <form>
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <br>
+                <button type="submit">Join Waitlist</button>
+            </form>
         </div>
     </section>
 
